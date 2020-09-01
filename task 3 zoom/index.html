@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 20%;
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('img').hover(function () {
+                $('body').append('<img src=' + $(this).attr("src") + ' id="newImg">')
+                $("#newImg").width(500)
+                $("#newImg").height(500)
+                $(this).mousemove(function (e) {
+                    $("#newImg").css({
+                        "top": +40 + e.pageY,
+                        "left": +40 + e.pageX,
+                        "position": "absolute"
+                    }, 3000)
+                })
+
+
+            }, function () {
+                $("#newImg").remove();
+            })
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <img src="image-0.png">
+    <img src="image-1.png">
+    <img src="image-2.png">
+</body>
+
+</html>

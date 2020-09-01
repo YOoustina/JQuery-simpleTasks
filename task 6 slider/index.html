@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .frame {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .content {
+        margin: auto;
+
+        width: 40%;
+        height: 400px;
+        position: relative;
+
+    }
+
+    #prev {
+        position: relative;
+        margin-left: 400px;
+    }
+
+    #prev:hover {
+        background-color: aquamarine;
+    }
+
+    #nxt:hover {
+        background-color: aquamarine;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .gallery {
+        display: flex;
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <h1>Click on any shape !</h1>
+    <div class="frame">
+        <div class="content">
+        </div>
+        <button id="prev"> prev </button>
+        <button id="nxt">next</button>
+    </div>
+    <div class="gallery active">
+
+        <img src="image-0.png" alt="">
+        <img src="image-1.png" alt="">
+        <img src="image-2.png" alt="">
+        <img src="image-3.png" alt="">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
